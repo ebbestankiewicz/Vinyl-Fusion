@@ -1,0 +1,436 @@
+@font-face {
+    font-family:'Nectarine';
+    src: url('/fonts/Nectarine.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat.ttf');
+}
+
+
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        header .menu-icon, header .cart-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+
+/* Initially hide the navigation links on small screens */
+.nav-links {
+    display: none;
+    flex-direction: column; /* Stack the items vertically for mobile */
+    position: absolute; /* So it overlays the page content */
+    top: 70px; /* Adjust to place it under the header */
+    right: 0;
+    background-color: #fff;
+    width: 100%; /* Take full width */
+    padding: 10px;
+}
+
+.nav-links li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Hamburger menu functionality */
+.menu-icon {
+    cursor: pointer;
+}
+
+/* Show navigation links when the 'active' class is applied */
+.nav-links.active {
+    display: flex;
+}
+
+/* For screens larger than 768px, show the navigation links horizontally */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+
+    /* Hide the hamburger menu on larger screens */
+    .menu-icon {
+        display: none;
+    }
+}
+
+
+
+
+/*Home Page*/
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .products-header h2, 
+        #filter-sort{
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Montserrat';
+        }
+
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        @media (min-width: 450px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 700px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 1500px) {
+            .product-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        
+
+        .product-grid img{
+            width: 160px;
+            height: auto;
+        }
+
+        #filter-sort{
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            color: black;
+            cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            font-size: 20px;
+            text-align-last: right;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-grid a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .pagination {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        footer img {
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #666;
+        }
+
+/*product Page*/
+    .buy-btn, 
+    .add-btn{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        border: 1.75px solid black;
+        font-size: 14px;
+    }
+
+    .add-btn{
+        color: black;
+        background-color: white;
+    }
+
+    .buy-btn{
+        color: white;
+        background-color: black;
+    }
+
+    #product-details h2, 
+    #product-info{
+        font-weight: 400;
+    }
+
+    #product-title, 
+    #product-price{
+        font-size: 24px;
+    }
+
+    #product-price{
+        font-weight: 300;
+    }
+
+    #product-info{
+        font-size: 16px;
+    }
+
+        #product-details img{
+            max-width: 100%;
+        }
+
+        span{
+            font-weight: bold;
+        }
+
+/* Checkout page styling */
+    .checkout-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .checkout-title h2 {
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    #cart-summary {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #cart-summary h1 {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #cart-items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .cart-product {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart-product img {
+        width: 80px;
+        height: auto;
+    }
+
+    .cart-product h2 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .cart-product p {
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+    }
+
+    .cart-total {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .cart-total-amount {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cart-total button{
+        background-color: white;
+        border: 1px solid black;
+        margin-left: 10px;
+    }
+
+
+    #proceed-to-checkout {
+        color: white;
+        background-color: black;
+        border: none;
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+
+    #proceed-to-checkout:hover {
+        background-color: #444;
+    }
+
+    #cart-summary a {
+        color: gray;
+        text-align: center;
+        margin-top: 15px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    #cart-summary a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+
+/* Confirmation Page */
+#confirmation-message {
+    max-width: 800px; /* Set a max width for the confirmation message section */
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#confirmation-message h1 {
+    font-size: 24px; /* Large heading */
+    color: black; /* Dark text color */
+    text-align: center; /* Center the heading */
+}
+
+#confirmation-message h2 {
+    font-size: 18px; /* Slightly smaller heading */
+    font-weight: 400;
+    text-align: center; /* Center the subheading */
+    margin-bottom: 20px; /* Space below the subheading */
+}
+
+/* Styling for order number and order date */
+#order-number,
+#order-date {
+    background-color: #e7f3fe; /* Light blue background */
+    border: 1px solid #b3d4fc; /* Blue border */
+    padding: 10px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Vertical margin for spacing */
+    font-size: 16px; /* Font size */
+    color: #2c3e50; /* Dark text color */
+}
+
+/* Styling for the order summary */
+#order-summary {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    margin-top: 20px; /* Space above the summary */
+}
+
+.order-item {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    border-bottom: 1px solid #eee; /* Separator line */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+.order-item:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.order-total {
+    font-weight: bold; /* Bold for emphasis */
+    font-size: 18px; /* Larger font size */
+    text-align: right; /* Align to the right */
+    margin-top: 20px; /* Space above the total */
+}
+
+/* Delivery information */
+.delivery {
+    padding: 15px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above delivery info */
+    text-align: center; /* Center the delivery text */
+}
+
+.delivery p {
+    margin: 5px 0; /* Vertical margin for spacing */
+    color: black; /* Dark text color */
+    font-size: 14px; /* Font size */
+}
+
+
+

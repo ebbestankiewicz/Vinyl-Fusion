@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Fusion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/080c4fb36f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/header-logo.png" alt="Vinyl Fusion Logo">
+        </a>
+        <div class="cart-icon">
+            <a href="checkout.html">
+                <i class="fa-solid fa-bag-shopping fa-xl" style="color: #000000;"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="products-header">
+                <h2>Products</h2>
+                <div id="filter">
+                    <select id="filter-sort">
+                        <option value="">Filter +</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="genre-pop">Pop music</option>
+                        <option value="genre-rnb">R&B</option>
+                        <option value="genre-rap">Rap</option>
+                        <option value="alphabetical-asc">A-Z</option>
+                        <option value="alphabetical-desc">Z-A</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section id="product-list">
+            <div class="product-grid">
+                <a href="product-blonde.html" class="product" data-price="799" data-genre="rnb">
+                    <img src="./images/frank-ocean.png" alt="Frank Ocean - Blonde">
+                    <p>Frank Ocean - Blonde</p>
+                    <p>799,00 NOK</p>
+                </a>
+                <a href="product-drake.html" class="product" data-price="599" data-genre="rap">
+                    <img src="./images/Drake.png" alt="Drake - If You're Reading This It's Too Late">
+                    <p>Drake - If You're Reading This It's Too Late</p>
+                    <p>599,00 NOK</p>
+                </a>
+                <a href="product-kanye.html" class="product" data-price="999" data-genre="rap">
+                    <img src="./images/kanye-west.png" alt="Kanye West - My Beautiful Dark Twisted Fantasy">
+                    <p>Kanye West - My Beautiful Dark Twisted Fantasy</p>
+                    <p>999,00 NOK</p>
+                </a>
+                <a href="product-taylor.html" class="product" data-price="699" data-genre="pop">
+                    <img src="./images/taylor-swift.png" alt="Taylor - Swift - Lover">
+                    <p>Taylor Swift - Lover</p>
+                    <p>699,00 NOK</p>
+                </a>
+                <a href="product-coldplay.html" class="product" data-price="499" data-genre="pop">
+                    <img src="./images/coldplay.png" alt="Coldplay - Music Of The Spheres Vinyl Record">
+                    <p>Coldplay - Music Of The Spheres</p>
+                    <p>499,00 NOK</p>
+                </a>
+                <a href="product-billie.html" class="product" data-price="799" data-genre="pop">
+                    <img src="./images/Billie-eilish.png" alt="Billie Eilish - Happier Than Ever">
+                    <p>Billie Eilish - Happier Than Ever</p>
+                    <p>799,00 NOK</p>
+                </a>
+                <a href="product-kygo.html" class="product" data-price="589" data-genre="pop">
+                    <img src="./images/kygo.png" alt="Kygo - KYGO">
+                    <p>Kygo - KYGO</p>
+                    <p>589,00 NOK</p>
+                </a>
+                <a href="product-ed.html" class="product" data-price="599" data-genre="pop">
+                    <img src="./images/ed-sheeren.png" alt="Ed Sheeren - Divide">
+                    <p>Ed Sheeren - Divide</p>
+                    <p>599,00 NOK</p>
+                </a>
+            </div>
+        </section>
+        <div class="pagination">
+            <p>1/1</p>
+        </div>
+    </main>
+    <footer>
+        <img src="./images/Vinyl_Fusion.png" alt="Vinyl Fusion Logo">
+        <p>&copy; 2024, Vinyl Fusion</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
